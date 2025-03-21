@@ -3,7 +3,7 @@ export default function Profile() {
     <section className="profile">
       {/* Imagen y datos principales */}
       <img
-        src="https://drive.google.com/file/d/1VB7jQDGmtf5vFwKtXD0KBxrGD0BFTg6w/view?usp=sharing"
+        src="https://avatars.githubusercontent.com/u/156024815?v=4"
         alt="Luis Zeballos"
         className="profile-img"
       />
