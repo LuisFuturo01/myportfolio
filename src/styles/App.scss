@@ -66,7 +66,14 @@ h2 {
     }
   }
 
-  nav {
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: $text-color;
+  }
+
+  .nav-menu {
     display: flex;
     gap: 1.5rem;
 
@@ -93,7 +100,36 @@ h2 {
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba($secondary-color, 0.95);
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+      &.open {
+        display: flex;
+      }
+
+      a {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba($text-color, 0.2);
+      }
+    }
+  }
 }
+
 
 // Animación para línea activa en el header
 @keyframes lightning {
@@ -520,10 +556,7 @@ section.home {
 
 // --- Responsividad ---
 @media (max-width: 768px) {
-  .header nav {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .about-content,
   .project-list {

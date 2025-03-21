@@ -3,20 +3,14 @@ export default function Projects() {
     {
       title: "E-commerce Zequitex",
       description: "Tienda en línea para productos textiles, con un sistema de pago integrado y gestión de inventario.",
-      link: "#",
-      techStack: "React, Node.js, MongoDB"
+      link: "https://zequitex.com",
+      techStack: "React, html, css, javaScript, php, sql"
     },
     {
       title: "Portfolio Personal",
       description: "Un portafolio personal desarrollado con React para mostrar mis habilidades, proyectos y experiencia.",
-      link: "#",
+      link: "https://portfolio-luis-zeballos.netlify.app/",
       techStack: "React, SCSS"
-    },
-    {
-      title: "Sistema de Inventarios",
-      description: "Aplicación web para la gestión de stock de productos en empresas, incluyendo reportes y notificaciones.",
-      link: "#",
-      techStack: "Laravel, MySQL"
     }
   ];
 
