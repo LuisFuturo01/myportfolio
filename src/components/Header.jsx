@@ -16,7 +16,9 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <Link to="/">
       <div className="logo">LZ</div>
+      </Link>
 
       {/* Menú hamburguesa */}
       <div className="hamburger" onClick={toggleMenu}>

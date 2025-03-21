@@ -1,5 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaDatabase, FaGithub } from "react-icons/fa";
 import { SiMysql, SiPostgresql, SiSass, SiLaravel, SiComposer } from "react-icons/si";
+import { Helmet } from "react-helmet-async";
 
 const skills = [
   { icon: <FaHtml5 />, name: "HTML5", description: "Estructura semántica y accesible." },
@@ -18,6 +19,16 @@ const skills = [
 
 export default function Skills() {
   return (
+    <>
+      <Helmet>
+        <title>Mis Habilidades | Luis Zeballos</title>
+        <meta name="description" content="Tengo experiencia en HTML, CSS, JavaScript, React.js, PHP, Laravel, MySQL y más." />
+        <meta name="keywords" content="habilidades, desarrollo web, frontend, backend, React.js, PHP, MySQL, UX/UI" />
+        <meta property="og:title" content="Mis Habilidades | Luis Zeballos" />
+        <meta property="og:description" content="Conoce mis habilidades en frontend, backend, bases de datos y diseño UX/UI." />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+        <meta property="og:url" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+      </Helmet>
     <section className="skills">
       <h2>Habilidades</h2>
       <div className="skills-grid">
@@ -30,5 +41,6 @@ export default function Skills() {
         ))}
       </div>
     </section>
+    </>
   );
 }

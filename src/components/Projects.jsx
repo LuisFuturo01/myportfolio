@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 export default function Projects() {
   const projects = [
     {
@@ -15,6 +16,16 @@ export default function Projects() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Mis Proyectos | Luis Zeballos</title>
+        <meta name="description" content="Explora mis proyectos en desarrollo web, incluyendo e-commerce, UX/UI y más." />
+        <meta name="keywords" content="proyectos, desarrollo web, React.js, PHP, Laravel, MySQL, UX/UI" />
+        <meta property="og:title" content="Mis Proyectos | Luis Zeballos" />
+        <meta property="og:description" content="Descubre mis proyectos de desarrollo web y diseño UX/UI." />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+        <meta property="og:url" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+      </Helmet>
     <section className="projects">
       <h2>Mis Proyectos</h2>
       <div className="project-list">
@@ -30,5 +41,6 @@ export default function Projects() {
         ))}
       </div>
     </section>
+    </>
   );
 }

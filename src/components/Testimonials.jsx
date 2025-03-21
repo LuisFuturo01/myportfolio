@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 export default function Testimonials() {
   const testimonials = [
     { 
@@ -20,6 +21,16 @@ export default function Testimonials() {
   
 
   return (
+    <>
+      <Helmet>
+        <title>Testimonios | Luis Zeballos</title>
+        <meta name="description" content="Descubre lo que dicen clientes y compañeros sobre mi trabajo en desarrollo web y diseño UX/UI." />
+        <meta name="keywords" content="testimonios, clientes, feedback, opiniones, desarrollo web, UX/UI" />
+        <meta property="og:title" content="Testimonios | Luis Zeballos" />
+        <meta property="og:description" content="Conoce las opiniones de clientes y colegas sobre mi trabajo." />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+        <meta property="og:url" content="https://avatars.githubusercontent.com/u/156024815?v=4" />
+      </Helmet>
     <section className="testimonials">
       <h2>Testimonios</h2>
       <div className="testimonial-list">
@@ -31,5 +42,6 @@ export default function Testimonials() {
         ))}
       </div>
     </section>
+    </>
   );
 }
