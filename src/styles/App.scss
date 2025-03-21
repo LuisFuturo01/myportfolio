@@ -41,6 +41,7 @@ h2 {
 }
 
 // --- Header ---
+// --- Header ---
 .header {
   display: flex;
   justify-content: space-between;
@@ -85,7 +86,7 @@ h2 {
 
       &:hover,
       &.active {
-        color: $accent-color;
+        color: mix($accent-color, #fff, 20%);
 
         &::after {
           content: "";
@@ -94,7 +95,7 @@ h2 {
           bottom: -5px;
           width: 100%;
           height: 3px;
-          background: $accent-color;
+          background: mix($accent-color, #fff, 20%);
           animation: lightning 0.4s ease-out;
         }
       }
@@ -129,6 +130,7 @@ h2 {
     }
   }
 }
+
 
 
 // Animación para línea activa en el header
@@ -287,6 +289,7 @@ section.home {
 
         &:hover {
           background: darken($accent-color, 10%);
+          
         }
       }
     }
@@ -527,7 +530,137 @@ section.home {
       transition: background 0.3s;
 
       &:hover {
-        background: darken($accent-color, 10%);
+        background: mix($accent-color, #000, 10%);
+
+      }
+    }
+  }
+}
+// ---NotFound---
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: $bg-dark;
+  color: $text-color;
+
+  h1 {
+    font-size: 5rem;
+    color: $accent-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba($text-color, 0.9);
+  }
+
+  .back-home {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: $accent-color;
+    color: $primary-color;
+    border-radius: $border-radius;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: lighten($accent-color, 10%);
+      transform: translateY(-3px);
+    }
+  }
+}
+// ---NotFound---
+// --- Header ---
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba($secondary-color, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid $accent-color;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: $text-color;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem;
+      position: relative;
+
+      &:hover,
+      &.active {
+        color: lighten($accent-color, 20%);
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 100%;
+          height: 3px;
+          background: lighten($accent-color, 20%);
+          animation: lightning 0.4s ease-out;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba($secondary-color, 0.95);
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+      &.open {
+        display: flex;
+      }
+
+      a {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba($text-color, 0.2);
       }
     }
   }
